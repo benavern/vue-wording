@@ -1,21 +1,62 @@
 # wording
 
-> A Vue.js project
+> Simple wording plugin for Vue.js
 
-## Build Setup
+## How To
+
+### install dependency
 
 ``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+npm i -S https://github.com/benavern/vue-wording
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+#### create a json file with your wording (root node must be the lang)
+
+``` json
+{
+  "fr": {
+    "simple": "Hello, World!",
+    "complicated": "j'ai mangé #{nb} #{things} et c'était #{nb} fois plus #{feeling}!",
+    "anotherWording": "Ce wording a été compilé avec amour! #{notrad}",
+    "plainObject": {
+      "key": "value: #{val}",
+      "array": [1, 2, {"third": "#{three}" }]
+      }
+    }
+  }
+
+```
+
+#### install the plugin in your app.js
+``` js
+import Vue from 'vue'
+
+import wordingPlugin from 'vue-wording'
+import wording from './wording.json'
+
+Vue.use(wordingPlugin, {lang: 'fr', wording})
+
+new Vue({
+  // ...
+})
+```
+#### Use the plugin in your vue components
+``` html
+<template>
+  <div>
+    {{ $t('complicated', {nb: 3, things: 'bananas', feeling: 'cool'}) }}
+  </div>
+</template>
+```
+
+``` html
+<script>
+  export default {
+    data () {
+      return {
+        simple: this.$t('simple')
+      }
+    }
+  }
+</script>
+```

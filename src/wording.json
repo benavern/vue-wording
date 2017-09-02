@@ -1,0 +1,11 @@
+{
+  "fr": {
+    "simple": "Hello, World!",
+    "complicated": "j'ai mangé #{nb} #{things} et c'était #{nb} fois plus #{feeling}!",
+    "anotherWording": "Ce wording a été compilé avec amour! #{notrad}",
+    "plainObject": {
+      "key": "value: #{val}",
+      "array": [1, 2, {"third": "#{three}" }]
+      }
+    }
+  }

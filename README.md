@@ -1,15 +1,16 @@
 # vue-wording
 
+[![npm version](https://badge.fury.io/js/vue-wording.svg)](https://badge.fury.io/js/vue-wording)
+
 > Simple wording plugin for Vue.js
 
 ## How To
 
 ### install dependency
 
-_will come soon on npm..._
 
 ``` bash
-npm i -S https://github.com/benavern/vue-wording
+npm i -S vue-wording
 ```
 
 #### create a json file with your wording (root node must be the lang)

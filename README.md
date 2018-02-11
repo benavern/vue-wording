@@ -1,6 +1,6 @@
 # vue-wording
 
-[![npm version](https://badge.fury.io/js/vue-wording.svg)](https://badge.fury.io/js/vue-wording)
+[![npm version](https://badge.fury.io/js/vue-wording.svg)](https://www.npmjs.com/package/vue-wording)
 
 > Simple wording plugin for Vue.js
 

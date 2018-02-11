@@ -2,7 +2,7 @@
  * Very simple Vue plugin for translations
  * Made by Benjamin Caradeuc <bencrdc@gmail.com>
  */
-
+import _get from 'lodash.get'
 /**
  * Replaces parts of the string by configured ones
  * @param {String} str the string to be computed
@@ -36,7 +36,7 @@ function processwording (arg, opts) {
       // if the value is an array, process each value
       return arg.map(item => processwording(item, opts))
     } else {
-      // if the valus is an object, process each value by key
+      // if the value is an object, process each value by key
       Object.keys(arg).forEach(key => { arg[key] = processwording(arg[key], opts) })
       return arg
     }
@@ -60,8 +60,12 @@ const WordingPlugin = {
      * @param {Object} opts the configurable strings to replace
      */
     Vue.prototype.$t = function (key, opts) {
-      if (!wording[lang] || !wording[lang][key]) return key
-      return processwording(wording[lang][key], opts)
+      try {
+        const wordingCopy = JSON.parse(JSON.stringify(wording))
+        return processwording(_get(wordingCopy, `${lang}.${key}`, key), opts)
+      } catch (e) {
+        console.error(e)
+      }
     }
   }
 }

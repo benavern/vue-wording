@@ -33,12 +33,13 @@
 
     <h2>Result</h2>
 
-    <section>{{ $t('simple') }}</section>
-    <section>{{ $t('oups') }}</section>
+    <!-- <section>{{ $t('simple') }}</section>
+    <section>{{ $t('oups') }}</section> -->
     <section>{{ $t('complicated', {nb: 3, things: 'bananes', feeling: 'cool'}) }}</section>
-    <section>{{ $t('anotherWording') }}</section>
-    <section><button @click="updateWording">{{ $t(reactive) }}</button></section>
+    <!-- <section>{{ $t('anotherWording') }}</section>
+    <section><button @click="updateWording">{{ $t(reactive) }}</button></section> -->
     <section><pre>{{ $t('plainObject', {val: 'yolo!', three: 3}) }}</pre></section>
+    <section>{{ $t('plainObject.array[2]', {three: 'eheh'}) }}</section>
 
     <hr>
 

@@ -1,10 +1,12 @@
-# wording
+# vue-wording
 
 > Simple wording plugin for Vue.js
 
 ## How To
 
 ### install dependency
+
+_will come soon on npm..._
 
 ``` bash
 npm i -S https://github.com/benavern/vue-wording

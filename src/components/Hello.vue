@@ -12,6 +12,8 @@
   &lt;section&gt;{{ $t('anotherWording') }}&lt;/section&gt;
   &lt;section&gt;&lt;button @click="updateWording"&gt;{{ $t(reactive) }}&lt;/button&gt;&lt;/section&gt;
   &lt;section&gt;&lt;pre&gt;{{ $t('plainObject', {val: 'yolo!', three: 3}) }}&lt;/pre&gt;&lt;/section&gt;
+  &lt;section&gt;{{ $t('plainObject.array[2]', {three: 'eheh'}) }}&lt;/section&gt;
+
 &lt;/template&gt;
 
 &lt;script&gt;
@@ -33,11 +35,11 @@
 
     <h2>Result</h2>
 
-    <!-- <section>{{ $t('simple') }}</section>
-    <section>{{ $t('oups') }}</section> -->
+    <section>{{ $t('simple') }}</section>
+    <section>{{ $t('oups') }}</section>
     <section>{{ $t('complicated', {nb: 3, things: 'bananes', feeling: 'cool'}) }}</section>
-    <!-- <section>{{ $t('anotherWording') }}</section>
-    <section><button @click="updateWording">{{ $t(reactive) }}</button></section> -->
+    <section>{{ $t('anotherWording') }}</section>
+    <section><button @click="updateWording">{{ $t(reactive) }}</button></section>
     <section><pre>{{ $t('plainObject', {val: 'yolo!', three: 3}) }}</pre></section>
     <section>{{ $t('plainObject.array[2]', {three: 'eheh'}) }}</section>
 

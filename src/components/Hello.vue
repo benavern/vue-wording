@@ -2,21 +2,24 @@
   <div class="hello">
     <h1>Wording Vue.js plugin</h1>
 
-
     <hr>
+
     <h2>Code</h2>
+
     <pre v-pre>&lt;template&gt;
+
   &lt;section&gt;{{ $t('simple') }}&lt;/section&gt;
   &lt;section&gt;{{ $t('oups') }}&lt;/section&gt;
   &lt;section&gt;{{ $t('complicated', {nb: 3, things: 'bananes', feeling: 'cool'}) }}&lt;/section&gt;
   &lt;section&gt;{{ $t('anotherWording') }}&lt;/section&gt;
   &lt;section&gt;&lt;button @click="updateWording"&gt;{{ $t(reactive) }}&lt;/button&gt;&lt;/section&gt;
   &lt;section&gt;&lt;pre&gt;{{ $t('plainObject', {val: 'yolo!', three: 3}) }}&lt;/pre&gt;&lt;/section&gt;
-  &lt;section&gt;{{ $t('plainObject.array[2]', {three: 'eheh'}) }}&lt;/section&gt;
+  &lt;section&gt;{{ $t('plainObject.key', {val: 'Awesome!'}) }}&lt;/section&gt;
 
 &lt;/template&gt;
 
 &lt;script&gt;
+
   export default {
     name: 'hello',
     data () {
@@ -30,6 +33,7 @@
       }
     }
   }
+
 &lt;/script&gt;</pre>
     <hr>
 
@@ -41,7 +45,7 @@
     <section>{{ $t('anotherWording') }}</section>
     <section><button @click="updateWording">{{ $t(reactive) }}</button></section>
     <section><pre>{{ $t('plainObject', {val: 'yolo!', three: 3}) }}</pre></section>
-    <section>{{ $t('plainObject.array[2]', {three: 'eheh'}) }}</section>
+    <section>{{ $t('plainObject.key', {val: 'Awesome!'}) }}</section>
 
     <hr>
 

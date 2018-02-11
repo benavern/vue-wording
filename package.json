@@ -10,8 +10,7 @@
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
-    "build:lib": "mkdir -p lib && babel src/wording.js -o lib/wording.js && minify lib/wording.js -o lib/wording.min.js",
-    "build:lib2": "mkdir -p lib &&  babel src/wording.js | minify -o lib/wording.min.js",
+    "build:lib": "mkdir -p lib &&  babel src/wording.js | minify -o lib/wording.min.js",
     "lint": "eslint --ext .js,.vue src"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "vue-wording",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Vue.js project",
   "author": "Benjamin Caradeuc <bencrdc@gmail.com>",
   "main": "lib/wording.min.js",
